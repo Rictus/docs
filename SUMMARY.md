@@ -7,7 +7,7 @@
 * [Setup](node/setup.md)
 * [Running](node/running.md)
 
-## @kyve/logic <a id="logic"></a>
+## @kyve/core <a id="logic"></a>
 
 * [Overview](logic/overview.md)
 * [API](logic/api/README.md)
