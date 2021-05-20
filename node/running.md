@@ -1,36 +1,36 @@
 # Running
 
-## Run the node on your local machine
+### Using Docker \(recommended\)
 
-Install the dependencies
-
-```text
-yarn install
-```
-
-Build the node
+**Build the Dockerfile**
 
 ```text
-yarn build
+yarn node:build
 ```
 
-Run it
-
-```text
-yarn start
-```
-
-## Run the node using Docker \(recommended\)
-
-Build the Dockerfile
+or
 
 ```text
 docker build -t kyve-node:latest .
 ```
 
-Run the container
+**Run the node**
+
+```text
+yarn node:run
+```
+
+or
 
 ```text
 docker run --name kyve-node kyve-node:latest
+```
+
+### Using NodeJS
+
+To run the KYVE node using NodeJS simply, start the script:
+
+```text
+yarn start
 ```
 

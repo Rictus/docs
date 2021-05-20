@@ -4,61 +4,60 @@ description: This guide will walk you trough the basics of setting up a KYVE nod
 
 # Setup
 
-## Clone the Repository
+### Clone the repository and install dependencies
 
-Clone the node repository from our GitHub:
+1. Clone the repository
 
-```
-$ git clone https://github.com/KYVENetwork/node.git
-```
+   ```text
+   git clone https://github.com/KYVENetwork/kyve.git
+   ```
 
-## Create a config file
+2. Install and link dependencies
 
-In your KYVE repository, you can configure which pools you want to support. To create your configuration, create a json file.
+   ```text
+   yarn setup
+   ```
 
-```bash
+3. Switch into the node folder
+
+   ```text
+   cd integrations/node
+   ```
+
+### Create a config.json
+
+```text
 touch config.json
 ```
 
-Inside your `config.json` you need to specify the pool id with the amount of tokens you want to stake per pool. Your config should look like this:
+Inside your `config.json` you need to specify the pool id with the number of tokens you want to stake per pool. Your config should look like this:
 
-{% code title="config.json" %}
-```bash
+```javascript
 {
   "pools": {
     "0": 1,
     "2": 10
+    // add further pool ids here
   }
 }
 ```
-{% endcode %}
 
 {% hint style="info" %}
-In the example above, your node would stake 1 KYVE tokens in pool with ID 0 and 10 tokens in pool with ID 2. For a list of available pools, please refer to [https://kyve.network/gov/pools](https://kyve.network/gov/pools). If your account does not have enough tokens to stake in the pool, you won't participate in the pool.
+In the example above, your node would stake 1 $KYVE token in the pool with ID 0 and 10 tokens in the pool with ID 2. You can find a list of available pools [here](https://kyve.network/gov/pools). If your account does not have enough tokens to stake in the pool, the process for the pool will fail.
 {% endhint %}
 
-## Copy your Arweave key file
+### Copy your arweave key file
 
-If you don't have an Arweave key file yet, you can create or claim one here \[insert link\]. We recommend renaming your key file to `arweave.json` as it is automatically covered by the `.gitignore`. Please make sure, that your wallet has a sufficient amount of AR to take part in validation or uploading. You also need KYVE tokens to run the node. You can get KYVE tokens here \[link to verto\]. While KYVE is running as a testnet, you can claim free tokens [here](https://kyve.network/gov/tokens).
+If you don't have an Arweave key file yet, you can create or claim one [here](https://arweave.org). We recommend renaming your key file in `arweave.json` as it is automatically covered by the `.gitignore`. Please make sure, that your wallet has a sufficient amount of AR to take part in validation or uploading. You also need $KYVE tokens to run the node. You can get $KYVE tokens [here](https://kyve.network/gov/tokens). While KYVE is running as a testnet, you can claim free tokens [here](https://kyve.network/gov/tokens).
 
-## Create a `.env` file
+### Create a `.env`-File
 
-```bash
-touch .env
-```
+Create your `.env` file and add the following
 
-Add the following
-
-{% code title=".env" %}
-```bash
+```text
 CONFIG=config.json
 WALLET=arweave.json
 ```
-{% endcode %}
 
-{% hint style="info" %}
-If you have a different name for your key file or your configuration, make sure that you supply the correct name in the `.env`
-{% endhint %}
-
-
+_Note: If your keyfile or config-file have different names, change them accordingly_
 
