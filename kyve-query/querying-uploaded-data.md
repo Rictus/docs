@@ -6,13 +6,11 @@
 yarn add @kyve/query
 ```
 
-### Usage
-
 {% hint style="info" %}
 Note: The KYVE-Query class extends ArDB. For detailed information please refer to the [documentation](https://github.com/cedriking/ardb).
 {% endhint %}
 
-**Basic Query**
+### **Basic Query**
 
 To query KYVE data, create a new Query and pass in the pool-ID. The default limit is 10 transactions. Call `.next()` to get to the next page. The default order is latest -&gt; oldest transactions.
 
@@ -29,7 +27,7 @@ const txs = query.find();
 const nextTxs = query.next();
 ```
 
-**Setting custom limits**
+### **Setting custom limits**
 
 To set a custom limit you can add a `.limit()` statement.
 
@@ -38,7 +36,7 @@ To set a custom limit you can add a `.limit()` statement.
 const txs = query.limit(50).find();
 ```
 
-**Other filters**
+### **Other filters**
 
 For other filters please refer to the ArDB [documentation](https://github.com/cedriking/ardb).
 
