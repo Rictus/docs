@@ -19,7 +19,7 @@ KYVE is developed open-source and publicly. You can find our GitHub here: [https
 
 ## Contributing
 
-If you want to integrate your own KYVE architecture, check out `@kyve/logic`.
+If you want to integrate your own KYVE architecture, check out `@kyve/core`.
 
 {% page-ref page="logic/overview.md" %}
 
