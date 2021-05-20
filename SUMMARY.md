@@ -7,6 +7,11 @@
 * [Setup](node/setup.md)
 * [Running](node/running.md)
 
+## @KYVE/SMARTWEAVE
+
+* [Overview](kyve-smartweave/overview.md)
+* [Manual Node Setup](kyve-smartweave/manual-node-setup.md)
+
 ## @kyve/core <a id="logic"></a>
 
 * [Overview](logic/overview.md)
