@@ -16,7 +16,7 @@ The archiving pool is the main organizational unit for your project. The pool ho
 
 1. An Arweave-Wallet. We recommend using [ArConnect](https://arconnect.io).
 2. Some AR in the wallet. You can get AR on Huobi or Binance
-3. $KYVE tokens, you can get some for free [here.](https://kyve.network/tokens)
+3. $KYVE tokens, you can get some for free [here.](https://kyve.network/gov/tokens)
 
 #### Set-up
 
