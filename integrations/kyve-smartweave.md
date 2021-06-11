@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-The KYVE + SmartWeave node allows you to store the state from any SmartWeave contract onto Arweave. This allows the client to load a state at a given block height without the need to calculate through every transaction.
+The KYVE + SmartWeave node allows you to store the state from any SmartWeave contract onto Arweave. This allows the client to load a state at a given block height without calculating through every transaction.
 
 ### Config
 

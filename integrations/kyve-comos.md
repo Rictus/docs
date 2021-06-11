@@ -2,7 +2,7 @@
 
 ### Overview
 
-The integration supports all Cosmos chains, which can be accessed via [Cosmostaion](https://cosmostation.io)
+The integration supports all Cosmos chains, which [Cosmostaion](https://cosmostation.io) supports.
 
 ### Config
 

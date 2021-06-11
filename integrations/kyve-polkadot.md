@@ -2,7 +2,7 @@
 
 ### Overview
 
-The integration allows you to archive any parachain with a WebSocket integration. 
+The integration allows you to archive any Parachain with a WebSocket integration. 
 
 ### Config
 

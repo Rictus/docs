@@ -6,7 +6,7 @@ The KYVE + Zilliqa node allows you to bridge any data stream from a Zilliqa chai
 
 ### Config
 
-The Zilliqa integration uses the WebSocket endpoint to listen to the latest block data. For more information have a look at their [documentation](https://dev.zilliqa.com/docs/dev/dev-tools-websockets/).
+The Zilliqa integration uses the WebSocket endpoint to listen to the latest block data. For more information, please have a look at their [documentation](https://dev.zilliqa.com/docs/dev/dev-tools-websockets/).
 
 {% tabs %}
 {% tab title="Mainnet" %}
