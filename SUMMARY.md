@@ -8,6 +8,10 @@
 * [Setup](node/setup.md)
 * [Running](node/running.md)
 
+## @kyve/query
+
+* [Querying uploaded data](kyve-query/querying-uploaded-data.md)
+
 ## Integrations
 
 * [@kyve/avalanche](integrations/kyve-avalanche.md)
@@ -21,10 +25,6 @@
 
 * [Overview](kyve-smartweave/overview.md)
 * [Manual Node Setup](kyve-smartweave/manual-node-setup.md)
-
-## @kyve/query
-
-* [Querying uploaded data](kyve-query/querying-uploaded-data.md)
 
 ## @kyve/core <a id="logic"></a>
 
