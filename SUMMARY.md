@@ -8,6 +8,18 @@
 * [Setup](node/setup.md)
 * [Running](node/running.md)
 
+## Official Integrations
+
+* [@kyve/avalanche](official-integrations/kyve-avalanche.md)
+* [@kyve/comos](official-integrations/kyve-comos.md)
+* [@kyve/polkadot](official-integrations/kyve-polkadot.md)
+* [@kyve/smartweave](official-integrations/kyve-smartweave.md)
+* [@kyve/solana](official-integrations/kyve-solana.md)
+
+## Inofficial Integrations
+
+* [@kyve/zilliqa](inofficial-integrations/kyve-zilliqa.md)
+
 ## @KYVE/SMARTWEAVE
 
 * [Overview](kyve-smartweave/overview.md)
