@@ -20,10 +20,10 @@ The archiving pool is the main organizational unit for your project. The pool ho
 
 #### Set-up
 
-1. Go to the[ pools overview](https://kyve.network/gov/pools)
+1. Go to the[ pools overview](https://kyve.network/gov/pools).
 2. Click on "Add new"
 3. Fill in a name and select the desired architecture.
-4. Fill in the pool config as required by your architecture.
+4. Fill in the pool config as required by your integration \(e.g., @kyve/avalanche\).
 5. Click on "Create Pool."
 
 {% hint style="info" %}
@@ -47,7 +47,7 @@ Before creating a vote, make sure that you have tokens staked in the vault.
 5. Click on "Propose Vote"
 6. Wait for the vote to be created \(this might take 5-10 minutes\)
 7. Click on the "Votes" tab inside your pool
-8. Vote with "yay".
+8. Vote with "yay."
 9. After 100 blocks, the vote is complete \(~3 hours\)
 10. Click on "Finalize"
 
