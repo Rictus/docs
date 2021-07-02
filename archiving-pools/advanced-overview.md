@@ -10,7 +10,7 @@ The name and logo are used for display purposes.
 
 #### Grace Period
 
-Measured in Arweave blocks. It determines how long a transaction registered by the uploader will stay open for voting. The higher the grace period, the longer it needs for a transaction to be fully validated. If set too small, it can cause validators to be unable to vote on it, resulting in a transaction marked as dropped and the validator receiving a slashing point.
+Measured in Arweave blocks. It determines how long a transaction will stay open for voting. The higher the grace period, the longer it takes for a transaction to be fully validated. If set too small, it can cause validators to be unable to vote on it, resulting in a transaction marked as dropped and the validator receiving a slashing point.
 
 #### Slash Threshold
 
@@ -18,7 +18,7 @@ For every violation uploaders or validators receive one slashing point. When the
 
 #### Payout
 
-The amount of $KYVE paid out can be configured dynamically or static. When dynamic pay-out is intended, KYVE measures the number of bytes uploaded by the uploader. The kyvePerBytes setting controls the number of tokens being released. If high computation is required, it makes sense to also set the idleCost option to release a static amount of tokens per payout.
+The amount of $KYVE paid out can be configured to be dynamically or static. When dynamic pay-out is intended, KYVE measures the number of bytes uploaded by the uploader. The `kyvePerBytes` setting controls the number of tokens being released. If high computation is required, it makes sense to also set the `idleCost` option to release a static amount of tokens per payout.
 
 #### Foreign Contracts
 
@@ -30,7 +30,7 @@ The Arweave address of the current uploader. Can be changed by the pool admin.
 
 #### Bundle Size
 
-The size of an ANS-102 bundle, which gets stored on Arweave. Using bundles reduces costs and prevents spamming Arweave. The faster your incoming data stream is, the higher the bundle size should be. We recommend sending one bundle every 10 minutes. 
+The size of an [ANS-102 bundle](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-102.md), which gets stored on Arweave. Using bundles reduces costs and prevents spamming the network. The faster your incoming data stream is, the higher the bundle size should be. We recommend sending one bundle every 10 minutes. 
 
 #### Config
 
@@ -38,11 +38,11 @@ A pool-specific config. The config object is exposed in the upload and validate 
 
 #### Credit
 
-An internal object to keep track of a user amount, stake, fund, and slashing points. Tokens in amount can be withdrawn at any time. Staked tokens are used for uploaders and validators as collateral. When their slashing points exceed the threshold, their stake gets slashed. Tokens in the fund will be reduced every time a transaction is finalized. When there is no fund left in the pool. The pool pauses until enough $KYVE is in the fund to fulfill a payout. 
+An internal object to keep track of a user amount, stake, fund, and slashing points. Tokens in amount can be withdrawn at any time. Staked tokens are used for uploaders and validators as collateral. When their slashing points exceed the threshold, their stake gets slashed. Tokens in the fund will be reduced every time a transaction is finalized. When there is no fund left in the pool, it pauses until enough $KYVE is in the fund to fulfill a payout. 
 
 #### Transactions \(txs\)
 
-An internal object for keeping track of a transaction's status. When the uploader uploads new data, it registers the transaction in the pool. The validator then fetches this transaction and performs the validation logic against the transactions data. They then submit their result to the pool, result in a transaction being dropped \(not enough validators voted\), valid or invalid. 
+An internal object for keeping track of a transaction's status. When the uploader uploads new data, it registers the transaction in the pool. The validator then fetches this transaction and performs the validation logic against the transaction data. The validator then submits its result to the pool. After the grace period has ended a transaction is either being dropped \(not enough validators voted\), valid or invalid. 
 
 #### Invocations & Foreign Calls
 
