@@ -8,6 +8,22 @@
 
 The name and logo are used for display purposes.
 
+#### Runtime
+
+An identifier used by the node to automatically load the correct integration.
+
+#### Version
+
+An internal pool version.
+
+#### Admins
+
+A list of Arweave addresses, which can update the pools settings. Admins can always remove and add new admins. By default, the pool creator is the only admin.
+
+#### Paused
+
+A boolean which can be set by the pool admins. When a pool is paused no data can be registered or submitted.
+
 #### Grace Period
 
 Measured in Arweave blocks. It determines how long a transaction will stay open for voting. The higher the grace period, the longer it takes for a transaction to be fully validated. If set too small, it can cause validators to be unable to vote on it, resulting in a transaction marked as dropped.
@@ -38,11 +54,11 @@ A pool-specific configuration. The config object is exposed in the upload and va
 
 #### Credit
 
-An internal object to keep track of a user's amount, stake, fund, and slashing points. Tokens in `amount` can be withdrawn at any time. Staked tokens are used for uploaders and validators as collateral. When their slashing points exceed the threshold, their stake gets slashed. Tokens in `fund` will be reduced every time a transaction is finalized. When there is not enough funding left in the pool, it pauses until enough tokens are in the `fund` to fulfill a payout. 
+An internal object to keep track of a user's amount, stake, fund, and slashing points. Tokens in `amount` can be withdrawn at any time. Staked tokens are used for uploaders and validators as collateral. When their slashing points exceed the threshold, their stake gets slashed. Tokens in `fund` will be reduced every time a transaction is finalized. When there is not enough funding left in the pool, it pauses until there are enough tokens to fulfill a payout. 
 
 #### Transactions \(txs\)
 
-An internal object for keeping track of a transaction's status. When the uploader uploads new data, it registers the transaction in the pool. The validator then fetches this transaction and performs the validation logic against the transaction data. The validator then submits its result to the pool. After the grace period has ended a transaction is either being dropped \(not enough validators voted\), valid or invalid. 
+An internal object for keeping track of a transaction's status. When the uploader uploads new data, it registers the transaction in the pool. The validator then fetches this transaction and performs the validation logic against the transaction data. The validator then submits its result to the pool. After the grace period has ended a transaction is either valid, invalid or dropped \(not enough validators voted\). 
 
 #### Invocations & Foreign Calls
 
