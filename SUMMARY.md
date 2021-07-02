@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Archiving Pools](archiving-pools.md)
+* [Archiving Pools](archiving-pools/README.md)
+  * [Advanced Overview](archiving-pools/advanced-overview.md)
 
 ## Node
 
