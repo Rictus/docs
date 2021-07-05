@@ -57,6 +57,7 @@ Create your `.env` file and add the following
 ```text
 CONFIG=config.json
 WALLET=arweave.json
+SEND_STATISTICS=true
 ```
 
 _Note: If your keyfile or config-file have different names, change them accordingly_
