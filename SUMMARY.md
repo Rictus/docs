@@ -1,7 +1,9 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [$KYVE Token](usdkyve-token.md)
 * [Archiving Pools](archiving-pools/README.md)
+  * [Interacting with a pool using NodeJS](archiving-pools/interacting-with-a-pool-using-nodejs.md)
   * [Advanced Overview](archiving-pools/advanced-overview.md)
 
 ## Node

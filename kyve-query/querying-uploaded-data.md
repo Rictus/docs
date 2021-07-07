@@ -17,7 +17,7 @@ To query KYVE data, create a new Query and pass in the pool-ID. The default limi
 ```typescript
 import { Query } from "@kyve/query";
 
-const poolID = 0;
+const poolID = "my_pool_id";
 const query = new Query(poolID);
 
 // finding latest transactions

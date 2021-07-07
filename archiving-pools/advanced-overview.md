@@ -75,6 +75,7 @@ Internal objects, used by the foreign call protocol. A SmartWeave specific proto
       governance: 'cpXtKvM0e6cqAgjv-BCfanWQmYGupECt1MxRk1N9Mjk',
       treasury: 'shwdmXTFCaMq8WaCGg79oCF5GCj0bpb5tNA62cluEQY'
     },
+    paused: false,
     uploader: '3dX8Cnz3N64nKt2EKmWpKL1EbErFP3RFjxSDyQHQrkI',
     bundleSize: 1,
     gracePeriod: 20,
