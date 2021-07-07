@@ -8,7 +8,7 @@ description: This guide will walk you trough the basics of setting up a KYVE nod
 
 * NodeJS & Docker installed on your machine
 * Arweave-Wallet with AR in it, get free AR using a faucet [here](https://faucet.arweave.net/).
-* $KYVE transferred to the pools where you like to run a node.
+* $KYVE deposited to the pools where you like to run a node.
 
 ### Clone the repository and install dependencies
 
