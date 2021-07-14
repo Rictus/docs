@@ -6,9 +6,8 @@ description: This guide will walk you trough the basics of setting up a KYVE nod
 
 ### Requirements
 
-* NodeJS & Docker installed on your machine
+* NodeJS, YARN & Docker installed on your machine
 * Arweave-Wallet with AR in it, get free AR using a faucet [here](https://faucet.arweave.net/).
-* $KYVE deposited to the pools where you like to run a node.
 
 ### Clone the repository and install dependencies
 
@@ -18,13 +17,19 @@ description: This guide will walk you trough the basics of setting up a KYVE nod
    git clone https://github.com/KYVENetwork/kyve.git
    ```
 
-2. Install and link dependencies
+2. Switch into the main directory
+
+   ```text
+   cd kyve
+   ```
+
+3. Install and link dependencies
 
    ```text
    yarn setup
    ```
 
-3. Switch into the node folder
+4. Switch into the node folder
 
    ```text
    cd integrations/node
@@ -43,7 +48,7 @@ Inside your `config.json` you need to specify the pool id with the number of tok
   "pools": {
     "B1SRLyFzWJjeA0ywW41Qu1j7ZpBLHsXSSrWLrT3ebd8": 1,
     "OFD4GqQcqp-Y_Iqh8DN_0s3a_68oMvvnekeOEu_a45I": 10
-    // add further pool ids here
+    ... other pool ids here
   }
 }
 ```
@@ -54,7 +59,7 @@ In the example above, your node would stake 1 $KYVE token in the pool with ID `B
 
 ### Copy your arweave key file
 
-If you don't have an Arweave key file yet, you can create or claim one [here](https://arweave.org). We recommend renaming your key file in `arweave.json` as it is automatically covered by the `.gitignore`. Please make sure, that your wallet has a sufficient amount of AR to take part in validation or uploading. You also need $KYVE tokens to run the node. You can get $KYVE tokens [here](https://kyve.network/gov/tokens). While KYVE is running as a testnet, you can claim free tokens [here](https://kyve.network/gov/tokens).
+If you don't have an Arweave key file yet, you can create or claim one [here](https://arweave.org). We recommend renaming your key file in `arweave.json` as it is automatically covered by the `.gitignore`. Please make sure, that your wallet has a sufficient amount of AR to take part in validation or uploading. You also need $KYVE tokens to run the node. You can get $KYVE tokens [here](../usdkyve-token.md#get-free-tokens). While KYVE is running as a testnet, you can claim free tokens [here](../usdkyve-token.md#get-free-tokens).
 
 ### Create a `.env`-File
 
