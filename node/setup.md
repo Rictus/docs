@@ -41,17 +41,18 @@ description: This guide will walk you trough the basics of setting up a KYVE nod
 touch config.json
 ```
 
-Inside your `config.json` you need to specify the pool id with the number of tokens you want to stake per pool. Your config should look like this:
+Inside your `config.json` you need to **specify** the **pool id** with the **number of tokens** you want to stake per pool. Your config should look like this:
 
+{% code title="config.json" %}
 ```javascript
 {
   "pools": {
     "B1SRLyFzWJjeA0ywW41Qu1j7ZpBLHsXSSrWLrT3ebd8": 1,
     "OFD4GqQcqp-Y_Iqh8DN_0s3a_68oMvvnekeOEu_a45I": 10
-    ... other pool ids here
   }
 }
 ```
+{% endcode %}
 
 {% hint style="info" %}
 In the example above, your node would stake 1 $KYVE token in the pool with ID `B1SR..` and 10 tokens in the pool with ID `OFD4...` . You can find a list of available pools [here](https://kyve.network/gov/pools). If your account does not have enough tokens to stake in the pool, the process for the pool will fail.
@@ -63,6 +64,10 @@ If you don't have an Arweave key file yet, you can create or claim one [here](ht
 
 ### Create a `.env`-File
 
+```text
+touch .env
+```
+
 Create your `.env` file and add the following. If you disable `SEND_STATISTICS`, your node will not send any information to our Sentry. `MAINTAINER` and `NAME` are **optional**, but can help the team to reach out to you if your node runs into issues.
 
 ```text
@@ -73,5 +78,7 @@ MAINTAINER=foo@bar.com
 NAME=my-node-name
 ```
 
-_Note: If your keyfile or config-file have different names, change them accordingly_
+{% hint style="info" %}
+_If your key file or config-file have different names, change them accordingly_
+{% endhint %}
 
