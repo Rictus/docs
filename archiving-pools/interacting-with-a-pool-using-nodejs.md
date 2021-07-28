@@ -15,7 +15,7 @@ const pool = new Pool(arweave, keyfile, poolID);
 Depositing allows you to transfer tokens into a pool. 
 
 ```typescript
-// deposits 100 tokens into the pool
+// deposit 100 tokens into the pool
 const txID = pool.deposit(100)
 ```
 
@@ -24,7 +24,7 @@ const txID = pool.deposit(100)
 Withdraw allows you to transfer tokens out of a pool. 
 
 ```typescript
-// withdraws 100 tokens into the pool
+// withdraw 100 tokens into the pool
 const txID = pool.withdraw(100)
 ```
 
@@ -33,7 +33,7 @@ const txID = pool.withdraw(100)
 Funding increases the pools balance. Tokens will be reduced from the funding on every payout. Requires that you have deposited tokens into the pool first.
 
 ```typescript
-// funds 100 tokens into the pool
+// fund 100 tokens into the pool
 const txID = pool.fund(100)
 ```
 
@@ -42,7 +42,7 @@ const txID = pool.fund(100)
 Unfunding reduces the pool's balance. Requires that you have funded tokens into the pool first.
 
 ```typescript
-// unfunds 100 tokens from the pool
+// unfund 100 tokens from the pool
 const txID = pool.unfund(100)
 ```
 
@@ -51,7 +51,7 @@ const txID = pool.unfund(100)
 Tokens will be staked. Requires that you have deposited tokens into the pool first. Staking is handled automatically when starting a node.
 
 ```typescript
-// stakes 100 tokens into the pool
+// stake 100 tokens into the pool
 const txID = pool.stake(100)
 ```
 
@@ -62,7 +62,7 @@ const txID = pool.stake(100)
 Tokens will be removed from the stake. Unstaking is handled automatically when starting a node.
 
 ```typescript
-// removes 100 staked tokens from the pool
+// remove 100 staked tokens from the pool
 const txID = pool.unstake(100)
 ```
 

@@ -14,6 +14,7 @@
 ## @kyve/query
 
 * [Querying uploaded data](kyve-query/querying-uploaded-data.md)
+* [Speed up SmartWeave contracts](kyve-query/speed-up-smartweave-contracts.md)
 
 ## Integrations
 
