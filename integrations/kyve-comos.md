@@ -1,4 +1,4 @@
-# @kyve/comos
+# @kyve/cosmos
 
 ### Overview
 

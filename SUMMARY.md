@@ -19,7 +19,7 @@
 ## Integrations
 
 * [@kyve/avalanche](integrations/kyve-avalanche.md)
-* [@kyve/comos](integrations/kyve-comos.md)
+* [@kyve/cosmos](integrations/kyve-comos.md)
 * [@kyve/polkadot](integrations/kyve-polkadot.md)
 * [@kyve/smartweave](integrations/kyve-smartweave.md)
 * [@kyve/solana](integrations/kyve-solana.md)
