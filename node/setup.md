@@ -41,21 +41,20 @@ description: This guide will walk you trough the basics of setting up a KYVE nod
 touch config.json
 ```
 
-Inside your `config.json` you need to **specify** the **pool id** with the **number of tokens** you want to stake per pool. Your config should look like this:
+Inside your `config.json` you need to **specify** the **pool address** with the **number of tokens** you want to stake per pool. Your config should look like this:
 
 {% code title="config.json" %}
 ```javascript
 {
   "pools": {
-    "B1SRLyFzWJjeA0ywW41Qu1j7ZpBLHsXSSrWLrT3ebd8": 1,
-    "OFD4GqQcqp-Y_Iqh8DN_0s3a_68oMvvnekeOEu_a45I": 10
+    "0xbBBfbE9A731634eDdf84C67A106CEE1F981F3f7e": 10
   }
 }
 ```
 {% endcode %}
 
 {% hint style="info" %}
-In the example above, your node would stake 1 $KYVE token in the pool with ID `B1SR..` and 10 tokens in the pool with ID `OFD4...` . You can find a list of available pools [here](https://kyve.network/gov/pools). If your account does not have enough tokens to stake in the pool, the process for the pool will fail.
+In the example above, your node would stake 10 $KYVE token in the pool with address `0xbBBf...` . You can find a list of available pools [here](https://app.kyve.network). If your account does not have enough tokens to stake in the pool, the process for the pool will fail.
 {% endhint %}
 
 ### Copy your arweave key file
@@ -73,6 +72,7 @@ Create your `.env` file and add the following. If you disable `SEND_STATISTICS`,
 ```text
 CONFIG=config.json
 WALLET=arweave.json
+PK=0x...
 SEND_STATISTICS=true
 MAINTAINER=foo@bar.com
 NAME=my-node-name
