@@ -1,2 +1,0 @@
-# @kyve/zilliqa
-

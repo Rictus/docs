@@ -12,10 +12,10 @@ $KYVE is used in the protocol for staking, voting, and rewarding uploaders and v
 
 Ways to earn tokens as a user:
 
-* Earn staking rewards by being an uploader or a validator
-* Earn staking rewards by having staked tokens in the governance
-* Earn tokens by getting them transferred from you through the treasury
-* Buy/Sell tokens from an exchange
+- Earn staking rewards by being an uploader or a validator
+- Earn staking rewards by having staked tokens in the governance
+- Earn tokens by getting them transferred from you through the treasury
+- Buy/Sell tokens from an exchange
 
 ### Token flow
 
