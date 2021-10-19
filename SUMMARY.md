@@ -8,7 +8,7 @@
 
 ## Node
 
-* [Setup](node/setup.md)
+* [Running the EVM integration](node/setup.md)
 * [Running](node/running.md)
 
 ## @kyve/query
@@ -30,10 +30,9 @@
 * [Overview](kyve-smartweave/overview.md)
 * [Manual Node Setup](kyve-smartweave/manual-node-setup.md)
 
-## @kyve/core <a id="logic"></a>
+## @kyve/core <a href="logic" id="logic"></a>
 
 * [Overview](logic/overview.md)
 * [API](logic/api/README.md)
   * [constructor](logic/api/constructor.md)
   * [run](logic/api/run.md)
-

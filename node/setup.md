@@ -1,84 +1,139 @@
 ---
-description: This guide will walk you trough the basics of setting up a KYVE node
+description: >-
+  This guide will walk you through the basics of running the KYVE + EVM
+  integration.
 ---
 
-# Setup
+# Running the EVM integration
 
-### Requirements
+## Requirements
 
-* NodeJS, YARN & Docker installed on your machine
-* Arweave-Wallet with AR in it, get free AR using a faucet [here](https://faucet.arweave.net/).
+* Ethereum wallet (MetaMask)
+* You need $DEV and $KYVE (You can get some for free [here](https://app.kyve.network/faucet))
+* Any device with a good internet connection
 
-### Clone the repository and install dependencies
+## Docker (Recommended)
 
-1. Clone the repository
+You can run the EVM integration directly from Docker.
 
-   ```text
-   git clone https://github.com/KYVENetwork/kyve.git
-   ```
+To pull the latest Docker image, run:
 
-2. Switch into the main directory
-
-   ```text
-   cd kyve
-   ```
-
-3. Install and link dependencies
-
-   ```text
-   yarn setup
-   ```
-
-4. Switch into the node folder
-
-   ```text
-   cd integrations/node
-   ```
-
-### Create a config.json
-
-```text
-touch config.json
+```
+docker pull kyve/evm:latest
 ```
 
-Inside your `config.json` you need to **specify** the **pool address** with the **number of tokens** you want to stake per pool. Your config should look like this:
+And to start your node, run the following (don't forget to pass in [options](setup.md#options)):
 
-{% code title="config.json" %}
-```javascript
-{
-  "pools": {
-    "0xbBBfbE9A731634eDdf84C67A106CEE1F981F3f7e": 10
-  }
-}
 ```
-{% endcode %}
-
-{% hint style="info" %}
-In the example above, your node would stake 10 $KYVE token in the pool with address `0xbBBf...` . You can find a list of available pools [here](https://app.kyve.network). If your account does not have enough tokens to stake in the pool, the process for the pool will fail.
-{% endhint %}
-
-### Copy your arweave key file
-
-If you don't have an Arweave key file yet, you can create or claim one [here](https://arweave.org). We recommend renaming your key file in `arweave.json` as it is automatically covered by the `.gitignore`. Please make sure, that your wallet has a sufficient amount of AR to take part in validation or uploading. You also need $KYVE tokens to run the node. You can get $KYVE tokens [here](../usdkyve-token.md#get-free-tokens). While KYVE is running as a testnet, you can claim free tokens [here](../usdkyve-token.md#get-free-tokens).
-
-### Create a `.env`-File
-
-```text
-touch .env
+docker run --name kyve-evm-node kyve/evm:latest --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
 ```
 
-Create your `.env` file and add the following. If you disable `SEND_STATISTICS`, your node will not send any information to our Sentry. `MAINTAINER` and `NAME` are **optional**, but can help the team to reach out to you if your node runs into issues.
+## Prebuilt Binaries
 
-```text
-CONFIG=config.json
-WALLET=arweave.json
-PK=0x...
-SEND_STATISTICS=true
-MAINTAINER=foo@bar.com
-NAME=my-node-name
+We also provide prebuilt binaries for you to run.
+
+We currently support Linux, macOS, and Windows binaries - which you can download from [here](https://github.com/KYVENetwork/evm/releases).
+
+To run a binary, all you need to do is specify your [options](setup.md#options).
+
+### Run on Linux
+
+```
+./kyve-evm-linux --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
 ```
 
-{% hint style="info" %}
-_If your key file or config-file have different names, change them accordingly_
-{% endhint %}
+### Run on macOS
 
+```
+./kyve-evm-macos --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
+```
+
+### Run on Windows
+
+```
+.\kyve-evm-win.exe --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
+```
+
+## Options
+
+**`-p, --pool <string>`**
+
+The address of the pool you want to run on.
+
+**`-s, --stake <number>`**
+
+The amount of tokens you want to stake.
+
+**`-pk, --private-key <string>`**
+
+Your Ethereum private key that holds $KYVE.
+
+**`-k, --keyfile <string>` **_**optional**_
+
+The path to your Arweave keyfile.
+
+**`-n, --name <string>` **_**optional, default is a random name**_
+
+The identifier name of the node.
+
+**`-st, --send-statistics <boolean>` **_**optional, default is true**_
+
+Send statistics.
+
+**`-e, --email <string>` **_**optional**_
+
+The email of the maintainer.
+
+## Verify a node is running correctly
+
+### Uploader
+
+When you run as an uploader you should see something like:
+
+```
+2021-10-19 11:30:11.424  INFO 🚀 Starting node ...
+    Name          = bored-barriss-offee
+    Address       = 0x7948b7D103f4B70645a1e6d32F7BeEC776D68008
+    Pool          = 0x841b639Fc930BB2eBc820B36E9A6810758D31A63
+    Desired Stake = 100 $KYVE
+    Version       = v0.0.3
+2021-10-19 11:30:11.429  DEBUG [Metadata] Attempting to fetch the metadata.
+2021-10-19 11:30:12.224  DEBUG [Metadata] Successfully fetched the metadata.
+2021-10-19 11:30:12.225  DEBUG [Settings] Attempting to fetch the settings.
+2021-10-19 11:30:12.943  DEBUG [Settings] Successfully fetched the settings.
+2021-10-19 11:30:12.948  DEBUG [Config] Attempting to fetch the config.
+2021-10-19 11:30:13.702  DEBUG [Config] Successfully fetched the config.
+2021-10-19 11:30:13.703  INFO 💻 Running node on runtime @kyve/evm.
+2021-10-19 11:30:15.130  DEBUG [Stake] Attempting to stake 100 $KYVE.
+2021-10-19 11:30:18.758  DEBUG [Stake] Approving 100 $KYVE to be spent. Transaction = 0x6f1b0dc91bcc245497e4c36573e3558ac12fbc958b082d3053ad76006306f8de
+2021-10-19 11:33:22.406  INFO [Stake] 👍 Successfully approved.
+2021-10-19 11:33:25.360  DEBUG [Stake] Staking 100 $KYVE. Transaction = 0x475239ca3023ed2420bd1ae28b5bd031424e836d4b45d065d839d036a5dc083b
+2021-10-19 11:40:50.727  INFO [Stake] 📈 Successfully staked.
+2021-10-19 11:40:51.495  INFO [EVM] ✅ Connection created. Endpoint = wss://api.avax.network/ext/bc/C/ws
+```
+
+### Validator
+
+When you run as a validator you should see something like:
+
+```
+2021-10-19 11:01:00.309  INFO 🚀 Starting node ...
+    Name          = thoughtful-tarfful
+    Address       = 0x785f8F0283C5fb0aaC4049A070B731D3316a9D52
+    Pool          = 0x841b639Fc930BB2eBc820B36E9A6810758D31A63
+    Desired Stake = 100 $KYVE
+    Version       = v0.0.3
+2021-10-19 11:01:00.314  DEBUG [Metadata] Attempting to fetch the metadata.
+2021-10-19 11:01:01.144  DEBUG [Metadata] Successfully fetched the metadata.
+2021-10-19 11:01:01.144  DEBUG [Settings] Attempting to fetch the settings.
+2021-10-19 11:01:01.885  DEBUG [Settings] Successfully fetched the settings.
+2021-10-19 11:01:01.889  DEBUG [Config] Attempting to fetch the config.
+2021-10-19 11:01:02.597  DEBUG [Config] Successfully fetched the config.
+2021-10-19 11:01:02.597  INFO 💻 Running node on runtime @kyve/evm.
+2021-10-19 11:01:14.020  DEBUG [Stake] Attempting to stake 100 $KYVE.
+2021-10-19 11:01:17.756  DEBUG [Stake] Approving 100 $KYVE to be spent. Transaction = 0x9ea0b66587c704cbaef918271b97254646c4cb668c9bff6e6cb448606249689d
+2021-10-19 11:13:55.444  INFO [Stake] 👍 Successfully approved.
+2021-10-19 11:13:58.666  DEBUG [Stake] Staking 100 $KYVE. Transaction = 0xd4d1229e761ac4f0540864ecef39df6aa0920c694548a1d9e2ac8ae14b362f57
+2021-10-19 11:27:43.624  INFO [Stake] 📈 Successfully staked.
+2021-10-19 11:27:43.629  INFO [Validator] ✅ Connection created. Endpoint = https://api.avax.network/ext/bc/C/rpc
+```
