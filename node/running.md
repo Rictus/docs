@@ -8,9 +8,9 @@ description: >-
 
 ## Requirements
 
-- Ethereum wallet (MetaMask)
-- You need $DEV and $KYVE (You can get some for free [here](https://app.kyve.network/faucet))
-- Any device with a good internet connection
+* Ethereum wallet (MetaMask)
+* You need $DEV and $KYVE (You can get some for free [here](https://app.kyve.network/faucet))
+* Any device with a good internet connection
 
 ## Docker (Recommended)
 
@@ -22,7 +22,7 @@ To pull the latest Docker image, run:
 docker pull kyve/evm:latest
 ```
 
-And to start your node, run the following (don't forget to pass in [options](setup.md#options)):
+And to start your node, run the following (don't forget to pass in [options](running.md#options)):
 
 ```
 docker run --name kyve-evm-node kyve/evm:latest --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
@@ -34,7 +34,7 @@ We also provide prebuilt binaries for you to run.
 
 We currently support Linux, macOS, and Windows binaries - which you can download from [here](https://github.com/KYVENetwork/evm/releases).
 
-To run a binary, all you need to do is specify your [options](setup.md#options).
+To run a binary, all you need to do is specify your [options](running.md#options).
 
 ### Run on Linux
 
@@ -68,19 +68,19 @@ The amount of tokens you want to stake.
 
 Your Ethereum private key that holds $KYVE.
 
-**`-k, --keyfile <string>` **_**optional**_
+**`-k, --keyfile <string>` \_optional**\_
 
 The path to your Arweave keyfile.
 
-**`-n, --name <string>` **_**optional, default is a random name**_
+**`-n, --name <string>` \_optional, default is a random name**\_
 
 The identifier name of the node.
 
-**`-st, --send-statistics <boolean>` **_**optional, default is true**_
+**`-st, --send-statistics <boolean>` \_optional, default is true**\_
 
 Send statistics.
 
-**`-e, --email <string>` **_**optional**_
+**`-e, --email <string>` \_optional**\_
 
 The email of the maintainer.
 
