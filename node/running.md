@@ -25,7 +25,7 @@ docker pull kyve/evm:latest
 And to start your node, run the following (don't forget to pass in [options](running.md#options)):
 
 ```
-docker run --name kyve-evm-node kyve/evm:latest --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
+docker run --name kyve-evm-node kyve/evm:latest --pool POOL_ADDRESS --private-key PRIVATE_KEY --stake 100
 ```
 
 ## Prebuilt Binaries
@@ -39,19 +39,19 @@ To run a binary, all you need to do is specify your [options](running.md#options
 ### Run on Linux
 
 ```
-./kyve-evm-linux --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
+./kyve-evm-linux --pool POOL_ADDRESS --private-key PRIVATE_KEY --stake 100
 ```
 
 ### Run on macOS
 
 ```
-./kyve-evm-macos --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
+./kyve-evm-macos --pool POOL_ADDRESS --private-key PRIVATE_KEY --stake 100
 ```
 
 ### Run on Windows
 
 ```
-.\kyve-evm-win.exe --pool {POOL_ADDRESS} --private-key {PRIVATE_KEY} --stake 100
+.\kyve-evm-win.exe --pool POOL_ADDRESS --private-key PRIVATE_KEY --stake 100
 ```
 
 ## Options
