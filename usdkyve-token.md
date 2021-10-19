@@ -1,7 +1,9 @@
 # $KYVE Token
 
 {% hint style="danger" %}
-KYVE is running is alpha testnet. Tokens do **not** have any value yet, and can **not** be traded on exchanges.
+KYVE is running is testnet.
+
+Tokens do **not** have any value, and can **not** be traded on exchanges.
 {% endhint %}
 
 ### Overview
@@ -14,14 +16,6 @@ Ways to earn tokens as a user:
 * Earn staking rewards by having staked tokens in the governance
 * Earn tokens by getting them transferred from you through the treasury
 * Buy/Sell tokens from an exchange
-
-### Get free tokens
-
-If you want to try out our testnet, you have the option to get free $KYVE. To receive the tokens, you must have [ArConnect](https://arconnect.io) installed in our browser. Click on the +-Icon on the accounts page. After a while, you should receive 1000 $KYVE to your address. 
-
-{% hint style="warning" %}
-It is important that you have $AR in your wallet before interacting with KYVE. You can get some for free [here.](https://faucet.arweave.net/)
-{% endhint %}
 
 ### Token flow
 
@@ -38,4 +32,3 @@ Only governance votes can control the treasury contract, and it will always rece
 #### Pools
 
 There can be multiple pools. Nodes must stake in the pool. Nodes can have two types: Uploader or Validator. Once the uploader has uploaded data and registered it in the pool, the validators fetch the data and validate it. After a grace period is over, the amount of $KYVE to be paid out is calculated. The reward will be paid out to a governance holder, the treasury, the uploader, and the validators. The validator reward gets evenly distributed between all validators.
-
