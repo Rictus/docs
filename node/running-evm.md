@@ -8,9 +8,9 @@ description: >-
 
 ## Requirements
 
-* Ethereum wallet (MetaMask)
-* You need $DEV and $KYVE (You can get some for free [here](https://app.kyve.network/faucet))
-* Any device with a good internet connection
+- Ethereum wallet (MetaMask)
+- You need $DEV and $KYVE (You can get some for free [here](https://app.kyve.network/faucet))
+- Any device with a good internet connection
 
 ## Docker (Recommended)
 
@@ -42,7 +42,7 @@ To run a binary, all you need to do is specify your [options](running.md#options
 ./kyve-evm-linux --pool POOL_ADDRESS --private-key PRIVATE_KEY --stake 100
 ```
 
-### Run on macOS
+### Run on MacOS
 
 ```
 ./kyve-evm-macos --pool POOL_ADDRESS --private-key PRIVATE_KEY --stake 100
@@ -76,13 +76,17 @@ The path to your Arweave keyfile.
 
 The identifier name of the node.
 
+**`-e, --endpoint <string>` \_optional**\_
+
+A custom Moonbase Alpha endpoint.
+
+**`-g, --gas-multiplier <string>` \_optional**\_
+
+The amount that you want to multiply the default gas price by.
+
 **`-st, --send-statistics <boolean>` \_optional, default is true**\_
 
 Send statistics.
-
-**`-e, --email <string>` \_optional**\_
-
-The email of the maintainer.
 
 ## Verify a node is running correctly
 
