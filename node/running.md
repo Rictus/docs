@@ -1,4 +1,4 @@
 # Running
 
-- [Running the EVM integration](node/running-evm.md)
-- [Running the Cosmos integration](node/running-cosmos.md)
+- [Running the EVM integration](running-evm.md)
+- [Running the Cosmos integration](running-cosmos.md)
