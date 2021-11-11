@@ -19,6 +19,4 @@ KYVE is developed open-source and publicly. You can find our GitHub here: [https
 
 ## Contributing
 
-If you want to integrate your own KYVE architecture, check out `@kyve/core`.
-
-https://github.com/KYVENetwork/core#readme
+If you want to integrate your own KYVE architecture, check out [`@kyve/core`](https://github.com/KYVENetwork/core#readme).
